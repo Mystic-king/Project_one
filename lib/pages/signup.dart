@@ -33,8 +33,7 @@ class _SignupState extends State<Signup> {
   registration() async {
     if (password == confirmPassword) {
       try {
-        UserCredential userCredential = await FirebaseAuth.instance
-            .createUserWithEmailAndPassword(email: email, password: password);
+        UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password);
         print(userCredential);
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
